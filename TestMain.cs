@@ -1,5 +1,6 @@
 using StudyPOO;
 using ClassAbs;
+using Circuitos;
 namespace Tester;
 class Study
 {
