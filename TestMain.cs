@@ -22,7 +22,8 @@ class Study
 
         #region Clases abstractas
 
-        
+        Triangulo hola = new Triangulo(3);
+        System.Console.WriteLine(hola.Perimetro);
 
         #endregion
 
