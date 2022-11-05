@@ -1,9 +1,11 @@
 using StudyPOO;
+using ClassAbs;
 namespace Tester;
 class Study
 {
     public static void Main()
     {
+        #region Herencia y Polimorfismo
         Cuenta personal = new Cuenta("Personal", 0);
         CuentaTransferencia familia = new CuentaTransferencia("Familia", 2000);
         familia.Transfiere(1000,personal);
@@ -15,9 +17,14 @@ class Study
         System.Console.WriteLine(test.Saldo);
         test.Extraer(1000);
         System.Console.WriteLine(test.Saldo);
+        
+        #endregion
+
+        #region Clases abstractas
 
         
-        
+
+        #endregion
 
 
     }

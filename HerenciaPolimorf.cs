@@ -1,3 +1,5 @@
+//Ejemplo práctico de POO(herencia y polimorfismo)
+
 namespace StudyPOO{
     public class Cuenta{
         public string titular{ get; private set;}
