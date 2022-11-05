@@ -11,7 +11,7 @@ namespace StudyPOO{
             if(cantidad<=0) throw new Exception("El saldo a depositar debe ser mayor que 0");
             Saldo+=cantidad;
         }
-        public void Extraer(float cantidad){
+        public virtual void Extraer(float cantidad){
             if(cantidad <=0) throw new Exception("La cantidad a extraer debe ser mayor que cero");
             else if(Saldo-cantidad<0) throw new Exception("No hay suficiente saldo para extraer");
             Saldo-=cantidad;
@@ -34,7 +34,7 @@ namespace StudyPOO{
     }
     public class CuentaCredito: Cuenta{
         public CuentaCredito(string titular, float saldoinicial):base(titular,saldoinicial){}
-        public new void Extraer(float cantidad){
+        public override void Extraer(float cantidad){
             if(cantidad<=0) throw new Exception("No puede extraer una cantidad menor o igual a 0");
             else if(Saldo>=cantidad) Saldo-=cantidad;
             else{
