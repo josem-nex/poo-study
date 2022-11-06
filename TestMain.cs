@@ -21,12 +21,21 @@ class Study
         
         #endregion
 
-        #region Clases abstractas
-
+        // clases abstractas
         Triangulo hola = new Triangulo(3);
         System.Console.WriteLine(hola.Perimetro);
 
-        #endregion
+        System.Console.WriteLine("PRUEBA DE CIRCUITOS");
+
+        //      El ejemplo introducido representa un circuito en paralelo que está formado por un circuito
+        //  en serie (compuesto por una resistencia y un inductor) y por un capacitor.
+        Circuito c = new Paralelo   (new Serie(
+                                                new Resistencia(4),
+                                                new Inductor(3)),
+                                    new Capacitor(2));    
+            
+        //      Redondeo el valor recibido a 3 cifras significativas.
+        System.Console.WriteLine(Math.Round(c.Impedancia(5),3));
 
 
     }
